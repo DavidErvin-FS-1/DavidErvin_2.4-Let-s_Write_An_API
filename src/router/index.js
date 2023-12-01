@@ -3,6 +3,7 @@
 const express = require('express');
 
 const router = express.Router();
+const service = require('../services');
 
 router.get('/', async (req, res) => {
   res.status(200).json({
@@ -13,6 +14,28 @@ router.get('/', async (req, res) => {
       method: req.method,
     },
   });
+});
+
+router.get('/cards', async (req, res) => {
+  try {
+    const cards = await service.getAllCards();
+    res.json(cards);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/cards/:set_id', async (req, res) => {
+  try {
+    const { set_id } = req.params;
+    const card = await service.getCardById(set_id);
+
+    res.json(card);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 module.exports = router;
