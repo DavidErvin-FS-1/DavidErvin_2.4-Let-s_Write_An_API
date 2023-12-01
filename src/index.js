@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Service is up',
+    message: 'Server is running',
     metadata: {
       host: req.hostname,
       path: req.path,
