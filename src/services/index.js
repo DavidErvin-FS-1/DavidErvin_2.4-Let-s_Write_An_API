@@ -1,4 +1,5 @@
 // src/services/index.js
+
 const axios = require('axios');
 
 const externalApiUrl = 'https://api.lorcana-api.com';
