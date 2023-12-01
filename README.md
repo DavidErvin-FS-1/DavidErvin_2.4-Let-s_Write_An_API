@@ -9,8 +9,6 @@ While its documentation is none existent due to recent set release, the Discord 
 
 ---
 
-<!-- I decided to use [Lorcana API](https://lorcana-api.com), which is an API for fetching Disney Lorcana trading card information. With this we will be getting all Disney Lorcana trading cards or filter them by set ID. -->
-
 <div align=center>
 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
@@ -19,8 +17,14 @@ While its documentation is none existent due to recent set release, the Discord 
 ![Axios](https://img.shields.io/badge/axios-%23483699.svg?style=for-the-badge&logo=axios&logoColor=%23483699.svg)
 
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
-![Dotenv](https://img.shields.io/badge/-dotenv-%23000.svg?style=for-the-badge&logo=dotenv&logoColor=#ECD53E)
+![Dotenv](https://img.shields.io/badge/dotenv-%23000.svg?style=for-the-badge&logo=dotenv&logoColor=ECD53E)
 ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
+
+---
+
+![NPM](https://img.shields.io/badge/WARNING:_JEST_TESTING_HAS_NOT_BEEN_IMPLEMENTED_YET-eed202?style=for-the-badge)
+
+Coming Soon
 
 </div>
 
