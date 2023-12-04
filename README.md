@@ -59,6 +59,11 @@ This application is used to get all cards made by [Ravensburger](https://www.rav
 - `GET /api/cards/:set_id`: Retrieve all Lorcana cards in a specific set.
   - **_`:set_id`_** can be set as **`TFC`** for _The First Chapter_ or **`RFB`** for _Rise of the Floodborn_
     - eg. /api/cards/TFC
+- `GET api/cards/:set_id/:card_id`: Retrieve all information on a specific card.
+  - **_`:card_id`_** is the card number.
+    - eg. /api/cards/TFC/1
+- `GET api/cards/:set_id/:card_id/name`: Returns only the name of a specific card.
+  - eg. /api/cards/TFC/1/name
 
 ## Enviroment Variables
 
