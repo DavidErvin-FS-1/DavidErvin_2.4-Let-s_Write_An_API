@@ -29,9 +29,34 @@ router.get('/cards', async (req, res) => {
 router.get('/cards/:set_id', async (req, res) => {
   try {
     const { set_id } = req.params;
-    const card = await service.getCardById(set_id);
+    const card = await service.getCardsBySet(set_id);
 
     res.json(card);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/cards/:set_id/:card_id', async (req, res) => {
+  try {
+    const { set_id, card_id } = req.params;
+    const card = await service.getCardById(set_id, card_id);
+
+    res.json(card);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/cards/:set_id/:card_id/name', async (req, res) => {
+  try {
+    const { set_id, card_id } = req.params;
+    const card = await service.getCardById(set_id, card_id);
+    const { Name } = card[0];
+
+    res.json(Name);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
