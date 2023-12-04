@@ -13,7 +13,7 @@ async function getAllCards() {
   }
 }
 
-async function getCardById(set_id) {
+async function getCardsBySet(set_id) {
   if (!set_id) {
     throw new Error('set_id');
   }
@@ -27,7 +27,25 @@ async function getCardById(set_id) {
   }
 }
 
+async function getCardById(set_id, card_id) {
+  if (!set_id) {
+    throw new Error('set_id');
+  }
+  if (!card_id) {
+    throw new Error('card_id');
+  }
+  try {
+    const response = await axios.get(
+      `${externalApiUrl}/cards/fetch?search=set_id=${set_id};card_num=${card_id}`
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   getAllCards,
+  getCardsBySet,
   getCardById,
 };
